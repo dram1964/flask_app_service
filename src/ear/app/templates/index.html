@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %} 
+    <h1>Reading List</h1>
+    {% for book in books %}
+    <div><p>{{ book.title }} by {{ book.author }} ( {{ book.status }} )</b></p></div>
+    {% endfor %}
+    <p><a href="{{ url_for('add_book') }}">Add a New Book</a></p>
+{% endblock %}
+
